@@ -1,0 +1,31 @@
+{
+  "name": "lexis-images-to-pdf",
+  "version": "1.0.0",
+  "description": "An image to pdf converter by lexis",
+  "main": "imagesToPdf.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "eslint --config .eslintrc.json *.js && nyc --reporter=lcov --reporter=text --check-coverage --lines 100 --functions 100 --branches 100 node test/test.js && nyc report --reporter=text-lcov | coveralls"
+  },
+  "keywords": [
+    "Image",
+    "To",
+    "Pdf"
+  ],
+  "author": "lexis",
+  "license": "MIT",
+
+"devDependencies": {
+    "coveralls": "^3.0.1",
+    "eslint": "^4.19.1",
+    "nyc": "^15.1.0",
+    "pdfjs-dist": "^2.0.489",
+    "tape": "^4.9.1"
+  },
+  "dependencies": {
+    "hummus": "^1.0.87",
+    "stream-to-promise": "^2.2.0"
+  }
+}
